@@ -1,51 +1,1457 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 :root {
+	--white-color: #fff;
+	--brown-color: #c3ad80;
+	--dark-blue: #284b63;
+	--gray-color: #436b78;
 
+	--story-desc: #757778;
+	--card-text: #49535a;
+	--barcode-text: #4f5e63;
 }
-
 
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 /* Body */
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Public Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+#app .title h1 {
+	margin: 20px 0 50px 0;
+	font-weight: 700;
+	font-size: 32px;
+	font-family: "Roboto Slab", serif;
+	color: var(--brown-color);
+}
+
+input#input-radio.form-check-input {
+	border-color: var(--gray-color);
+}
+
+.form-check-input:checked {
+	background-color: var(--gray-color);
+	border-color: var(--gray-color);
+}
+
+/* Landing Pages */
+
+#front .img-front {
+	width: 100%;
+	clip-path: ellipse(100% 83% at 50% 7%);
+	height: 620px;
+	object-fit: cover;
+}
+
+#front {
+	text-align: center;
+}
+
+#front .container .text {
+	color: white;
+	margin-top: -320px;
+	position: relative;
+	line-height: 10px;
+}
+
+#front .container .text h1 {
+	margin-bottom: 60px;
+	font-family: "Roboto Slab", serif;
+	font-size: 45px;
+	letter-spacing: 2px;
+}
+
+#front .container button {
+	margin: 50px 0;
+	padding: 6px 30px;
+	background-color: white;
+	color: #284b63;
+	border: 1px solid #284b63;
+	border-radius: 30px 0 30px 30px;
+	transition: 0.3s;
+}
+
+#front .container button:hover {
+	background-color: #284b63;
+	color: white;
+}
+
+/* Homepage */
+
+.top img {
+	width: 100%;
+	clip-path: ellipse(95% 80% at 50% 0%);
+	object-fit: cover;
+	height: 600px;
+}
+
+.top .container {
+	text-align: center;
+}
+
+.top .container .text-top {
+	margin-top: -300px;
+	position: relative;
+	color: rgb(255, 255, 255);
+	font-family: "Roboto Slab", serif;
+}
+
+.text-top p {
+	font-size: 20px;
+	font-family: "Sarabun", sans-serif;
+}
+
+.text-top h1 {
+	font-size: 60px;
+	word-spacing: 10px;
+	font-family: "Roboto Slab", serif;
+}
+
+.top .container .text-bottom {
+	margin: 100px 0 100px 0;
+	font-family: "Fanwood Text", serif;
+	font-size: 18px;
+}
+
+.introduce {
+	background: linear-gradient(
+		180deg,
+		#fafdfe 0.22%,
+		#436b78 53.69%,
+		#284b63 83.94%
+	);
+	box-shadow: 1px -25px 60px rgba(0, 87, 139, 0.1);
+	padding-top: 20px;
+	text-align: center;
+	clip-path: ellipse(100% 81% at 50% 17%);
+	border-radius: 30px 30px 0 0;
+	height: 700px;
+}
+
+.introduce .text-center {
+	margin: 40px 370px;
+	font-family: "Dancing Script", cursive;
+	font-size: 18px;
+}
+
+.introduce .intro {
+	display: flex;
+	justify-content: center;
+	column-gap: 200px;
+}
+
+.introduce .intro .male img,
+.female img {
+	width: 200px;
+}
+
+.introduce .intro .male h3,
+.female h3 {
+	font-family: "Roboto Slab", serif;
+	color: #f3ce85;
+	font-size: 32px;
+}
+
+.introduce .intro .male p,
+.female p {
+	color: white;
+	font-family: "Sarabun", sans-serif;
+}
+
+.introduce .count {
+	font-family: "Sarabun", sans-serif;
+	color: white;
+	margin-top: 70px;
+}
+
+.introduce .count .text-count {
+	font-style: italic;
+}
+
+.counting {
+	display: flex;
+	justify-content: center;
+	column-gap: 15px;
+	margin: -70px 0 30px 0;
+	font-family: "Sarabun", sans-serif;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+.counting .circle {
+	background: linear-gradient(180deg, #517682 0%, #284b63 100%);
+	box-shadow: 0px 49px 60px -19px rgba(19, 107, 188, 0.2);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.counting .circle b {
+	font-size: 32px;
+	letter-spacing: 3px;
+}
+
+.counting .circle p {
+	font-size: 13px;
+}
+
+.resepsi {
+	text-align: center;
+	margin: 70px 0 0 0;
+	background: #fafdfe;
+	box-shadow: 1px -25px 60px rgba(0, 87, 139, 0.1);
+	border-radius: 53px 53px 0px 0px;
+	padding: 50px 0;
+	line-height: 40px;
+}
+
+.resepsi h2 {
+	font-family: "Roboto Slab", serif;
+	font-weight: 700;
+	color: #c3ad80;
+	letter-spacing: 1px;
+}
+
+.resepsi p {
+	font-family: "Sarabun", sans-serif;
+	font-weight: 300;
+}
+
+.resepsi h6 {
+	font-family: "Sarabun", sans-serif;
+	font-weight: 600;
+}
+
+.resepsi hr {
+	margin: 0 370px 25px 370px;
+}
+
+.resepsi img {
+	width: 50px;
+	margin: 15px 0;
+	font-family: "Sarabun", sans-serif;
+	font-weight: 300;
+}
+
+.resepsi .italic {
+	font-style: italic;
+}
+
+.resepsi button {
+	margin: 20px 0;
+	border: none;
+	padding: 0 30px;
+	background-color: #284b63;
+	color: white;
+	border-radius: 30px 0 30px 30px;
+}
+
+.resepsi button img {
+	width: 20px;
+	margin: -2px 3px 0 0;
+}
+
+/* Gallery */
+
+#gallery .container {
+	width: min(100% - 30px, 1320px);
+}
+
+#gallery {
+	margin-top: 50px;
+	background: #fafdfe;
+	box-shadow: 1px -25px 60px rgba(0, 87, 139, 0.1);
+	border-radius: 53px;
+}
+
+.gallery .slider-img .wedding-images img {
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+}
+
+.gallery .slider-img .wedding-images {
+	display: flex;
+	justify-content: center;
+}
+
+/* Story */
+
+#story {
+	margin-top: 100px;
+	background: #fafdfe;
+	box-shadow: 1px -25px 60px rgba(0, 87, 139, 0.1);
+	border-radius: 53px;
+}
+
+#story .container {
+	width: min(100% - 30px, 991px);
+}
+
+.story-content {
+	margin-bottom: 100px;
+}
+
+.story-content .story-img img {
+	width: 460px;
+	height: 300px;
+	border-radius: 93px 0px 60px 105px / 60px 0px 39px 88px;
+}
+
+.story-content .story-desc {
+	padding: 0 0 0 20px;
+	font-family: "Sarabun";
+}
+
+.story-content .story-desc .date {
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 20px;
+	color: var(--story-desc);
+}
+
+.story-content .story-desc .description {
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--story-desc);
+}
+
+/* Story Content Right */
+
+.story-content-right {
+	margin-bottom: 100px;
+}
+
+.story-content-right .story-img img {
+	width: 460px;
+	height: 300px;
+}
+
+.story-content-right .story-desc {
+	padding: 0 20px 0 0;
+	font-family: "Sarabun";
+}
+
+.story-content-right .story-desc .date {
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 20px;
+	color: var(--story-desc);
+}
+
+.story-content-right .story-desc .description {
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--story-desc);
+}
+
+/* Guest Book */
+
+#guest-book .bg-wedding {
+	background: url("/img/bg-wedding.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	filter: blur(8px);
+}
+
+#guest-book .content-guestbook {
+	height: 100%;
+	background: rgba(117, 119, 120, 0.4);
+	color: var(--white-color);
+}
+
+.content-guestbook .container {
+	width: min(100% - 30px, 991px);
+}
+
+#guest-book .content-guestbook .dots {
+	margin-top: 50px;
+	color: transparent;
+}
+
+#guest-book .content-guestbook .title-guest h1 {
+	font-family: "Roboto Slab", serif;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+#guest-book .content-guestbook .title-guest p {
+	font-family: "Sarabun";
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.content-guestbook .guestbook-wrapper {
+	margin-top: 30px;
+}
+
+form.input-kehadiran {
+	font-family: "Sarabun";
+	font-size: 20px;
+	padding: 30px 30px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+
+form.input-kehadiran .form-group {
+	margin: 0 0 25px 0;
+}
+
+form.input-kehadiran .form-check {
+	margin: 0 0 10px 0;
+}
+
+form.input-kehadiran button.btn.btn-dark.mt-5 {
+	width: 90%;
+	font-size: 20px;
+	font-family: "Sarabun";
+	display: block;
+	margin: auto;
+	background-color: var(--dark-blue);
+	border-color: var(--dark-blue);
+	border-radius: 30px 0px 30px 30px;
+}
+
+/* Card Guest Book */
+
+#card .container {
+	width: min(100% - 30px, 1320px);
+}
+
+.card-ucapan {
+	margin: 40px 0 40px 0;
+}
+
+.card-ucapan .ucapan-user {
+	max-width: 391px;
+	padding: 20px 20px;
+}
+
+.card-ucapan .ucapan-user .content-card {
+	padding: 20px 20px;
+	background: var(--white-color);
+	border-radius: 10px;
+}
+
+.card-ucapan .ucapan-user .content-card p {
+	color: var(--card-text);
+}
+
+.card-ucapan .ucapan-user .title-card .name-card h4 {
+	margin: 0;
+	color: var(--story-desc);
+	font-size: 22px;
+}
+
+.card-ucapan .ucapan-user .title-card .box h5 {
+	font-size: 14px;
+	color: var(--white-color);
+	margin: 0;
+}
+
+.card-ucapan .ucapan-user .title-card .box {
+	width: 120px;
+	padding: 5px 5px;
+	text-align: center;
+	background: var(--gray-color);
+	border-radius: 5px;
+}
+
+/* Gift Corner */
+
+#gift {
+	margin-top: -30px;
+	background: #436b78;
+	box-shadow: 1px -12px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 32px 32px 0px 0px;
+}
+
+#gift .container {
+	width: min(100% - 30px, 991px);
+}
+
+#gift .container .desc h1 {
+	padding: 100px 0 50px 0;
+	font-family: "Roboto Slab", serif;
+	font-weight: 400;
+	font-size: 32px;
+	color: #f6fcff;
+}
+
+#gift .container .desc p {
+	margin: 0 0 50px 0;
+	font-weight: 400;
+	font-size: 20px;
+	color: var(--white-color);
+}
+
+#gift .qr {
+	width: 388px;
+	height: 275px;
+	background: #f8f8f8;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+
+#gift .qr h1 {
+	margin: 25px 25px;
+	font-weight: 400;
+	font-size: 26px;
+	color: var(--barcode-text);
+}
+
+#gift .nama-mempelai {
+	margin: 100px 0 100px 0;
+	color: var(--white-color);
+}
+
+#gift .nama-mempelai p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+#gift .nama-mempelai h1 {
+	font-family: "Roboto Slab", serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 60px;
+}
+
+#sosmed {
+	margin: 50px 0 20px 0;
+}
+
+#sosmed a.sosmed {
+	margin: 0 20px 0 20px;
+	padding: 5px 13px;
+	border-radius: 100%;
+	font-size: 25px;
+	background-color: var(--white-color);
+	color: var(--dark-blue);
+}
+
+.copyright p {
+	margin: 0;
+	padding: 10px 0 20px 0;
+	color: var(--white-color);
+}
 /* Responsive */
 
 @media screen and (max-width: 1400px) {
-
 }
 
 @media screen and (max-width: 1200px) {
+	/* Homepage */
+	.top .container .text-top {
+		margin-top: -320px;
+	}
 
+	.top .container .text-bottom {
+		margin: 100px 0 100px 0;
+	}
+
+	.resepsi hr {
+		margin: 0 300px 25px 300px;
+	}
+
+	.introduce .text-center {
+		margin: 40px 300px;
+	}
 }
 
 @media screen and (max-width: 991px) {
-    
+	/* Homepage */
 
+	.introduce .text-center {
+		margin: 40px 180px;
+	}
+
+	.introduce .intro {
+		column-gap: 150px;
+	}
+
+	.resepsi hr {
+		margin: 0 180px 25px 180px;
+	}
+
+	/* Gallery */
+
+	.gallery .slider-img .wedding-images img {
+		width: 300px;
+		height: 300px;
+	}
+
+	/* Story */
+
+	#story {
+		margin-top: 100px;
+	}
+
+	.story-content {
+		margin-bottom: 100px;
+	}
+
+	.story-content .story-img img {
+		width: 400px;
+		height: 260px;
+	}
+
+	.story-content .story-desc {
+		padding: 0 0 0 20px;
+	}
+
+	.story-content .story-desc .date {
+		font-size: 20px;
+	}
+
+	.story-content .story-desc .description {
+		font-size: 20px;
+	}
+
+	/* Story Content Right */
+
+	.story-content-right {
+		margin-bottom: 100px;
+	}
+
+	.story-content-right .story-img img {
+		width: 400px;
+		height: 260px;
+	}
+
+	.story-content-right .story-desc {
+		padding: 0 20px 0 0;
+	}
+
+	.story-content-right .story-desc .date {
+		font-size: 24px;
+	}
+
+	.story-content-right .story-desc .description {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 768px) {
+	/* Landing Pages */
 
+	#front .img-front {
+		clip-path: ellipse(100% 83% at 50% 7%);
+		height: 500px;
+	}
+
+	#front .container button {
+		margin: 100px 0;
+	}
+
+	/* Landing Pages */
+
+	.top img {
+		height: 500px;
+	}
+
+	.top .container .text-bottom {
+		margin: 130px 0 100px 0;
+		font-size: 17px;
+	}
+
+	.introduce .text-center {
+		margin: 40px 100px;
+	}
+
+	.introduce .intro {
+		column-gap: 110px;
+	}
+
+	.introduce .count {
+		margin-top: 30px;
+	}
+
+	.resepsi hr {
+		margin: 0 100px 25px 100px;
+	}
+
+	.resepsi h2 {
+		font-size: 25px;
+	}
+
+	/* Gallery */
+
+	.gallery .slider-img .wedding-images img {
+		width: 250px;
+		height: 250px;
+	}
+
+	/* Story */
+
+	#story {
+		margin-top: 100px;
+	}
+
+	.story-content {
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+
+	.story-content .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content .story-desc .date {
+		font-size: 24px;
+	}
+
+	.story-content .story-desc .description {
+		font-size: 20px;
+	}
+
+	/* Story Content Right */
+
+	.story-content-right {
+		flex-direction: column-reverse;
+		margin-bottom: 100px;
+	}
+
+	.story-content-right .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content-right .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content-right .story-desc .date {
+		font-size: 24px;
+	}
+
+	.story-content-right .story-desc .description {
+		font-size: 20px;
+	}
+
+	/* Card Guest Book */
+
+	.card-ucapan .ucapan-user {
+		max-width: 391px;
+		padding: 10px 10px;
+	}
+
+	.card-ucapan .ucapan-user .content-card {
+		padding: 15px 15px;
+		background: var(--white-color);
+		border-radius: 10px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .name-card h4 {
+		margin: 0;
+		color: var(--story-desc);
+		font-size: 22px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box h5 {
+		font-size: 14px;
+		color: var(--white-color);
+		margin: 0;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box {
+		width: 84px;
+		padding: 5px 5px;
+	}
+
+	#gift .qr {
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 576px) {
+	/* Landing Pages */
 
+	#front .img-front {
+		clip-path: ellipse(100% 83% at 50% 7%);
+		height: 450px;
+	}
+
+	#front .container .text {
+		color: white;
+		margin-top: -280px;
+		position: relative;
+		line-height: 10px;
+	}
+
+	#front .container button {
+		margin: 80px 0;
+	}
+
+	/* Homepage */
+
+	.introduce .intro {
+		column-gap: 80px;
+	}
+
+	.introduce .intro .male img,
+	.female img {
+		width: 170px;
+	}
+
+	.introduce .intro .male h3,
+	.female h3 {
+		font-size: 30px;
+	}
+
+	.introduce .intro .male p,
+	.female p {
+		font-size: 15px;
+	}
+
+	.introduce .count {
+		font-family: "Sarabun", sans-serif;
+		color: white;
+		margin-top: 70px;
+	}
+
+	.counting {
+		margin: -85px 0 30px 0;
+	}
+
+	.counting .circle {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		padding: 15px;
+	}
+
+	.counting .circle b {
+		font-size: 28px;
+		letter-spacing: 3px;
+	}
+
+	.counting .circle p {
+		font-size: 12px;
+	}
+
+	/* Story */
+
+	#story {
+		margin-top: 100px;
+	}
+
+	.story-content {
+		margin-bottom: 100px;
+	}
+
+	.story-content .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content .story-desc .date {
+		font-size: 20px;
+	}
+
+	.story-content .story-desc .description {
+		font-size: 18px;
+	}
+
+	/* Story Content Right */
+
+	.story-content-right {
+		flex-direction: column-reverse;
+		margin-bottom: 100px;
+	}
+
+	.story-content-right .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content-right .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content-right .story-desc .date {
+		font-size: 20px;
+	}
+
+	.story-content-right .story-desc .description {
+		font-size: 18px;
+	}
 }
 
 @media screen and (max-width: 500px) {
+	/* Title */
 
+	#app .title h1 {
+		font-size: 25px;
+	}
+
+	/* Landing Pages */
+
+	#front .img-front {
+		clip-path: ellipse(100% 95% at 50% 5%);
+		height: 400px;
+	}
+
+	#front .container .text {
+		margin-top: -240px;
+	}
+
+	#front .container button {
+		margin: 60px 0;
+	}
+
+	/* Home Pages */
+
+	.text-top h1 {
+		font-size: 45px;
+		word-spacing: 5px;
+	}
+
+	.text-top p {
+		font-size: 18px;
+	}
+
+	.top .container .text-bottom {
+		margin: 80px 0 100px 0;
+		font-size: 17px;
+	}
+
+	.top .container .text-top {
+		margin-top: -270px;
+	}
+
+	.resepsi hr {
+		margin: 0 80px 25px 80px;
+	}
+
+	.introduce .text-center {
+		margin: 40px 80px;
+	}
+
+	.introduce .intro {
+		column-gap: 60px;
+	}
+
+	.introduce .intro .male img,
+	.female img {
+		width: 150px;
+	}
+
+	.introduce .intro .male h3,
+	.female h3 {
+		font-size: 28px;
+	}
+
+	.introduce .intro .male p,
+	.female p {
+		font-size: 14px;
+	}
+
+	.introduce .count {
+		margin-top: 90px;
+	}
+
+	.counting .circle {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		padding: 10px;
+	}
+
+	.counting .circle b {
+		font-size: 28px;
+		letter-spacing: 3px;
+	}
+
+	.counting .circle p {
+		font-size: 12px;
+	}
+
+	.resepsi .italic {
+		font-size: 13px;
+		line-height: 15px;
+	}
+
+	/* Gallery */
+
+	.gallery .slider-img .wedding-images img {
+		width: 200px;
+		height: 200px;
+	}
+
+	/* Story */
+
+	#story {
+		margin-top: 100px;
+	}
+
+	.story-content {
+		margin-bottom: 100px;
+	}
+
+	.story-content .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content .story-desc .date {
+		font-size: 18px;
+	}
+
+	.story-content .story-desc .description {
+		font-size: 16px;
+	}
+
+	/* Story Content Right */
+
+	.story-content-right {
+		flex-direction: column-reverse;
+		margin-bottom: 100px;
+	}
+
+	.story-content-right .story-img img {
+		width: 100%;
+		height: auto;
+	}
+
+	.story-content-right .story-desc {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.story-content-right .story-desc .date {
+		font-size: 18px;
+	}
+
+	.story-content-right .story-desc .description {
+		font-size: 16px;
+	}
+
+	/* Card Guest Book */
+
+	.card-ucapan .ucapan-user {
+		max-width: 391px;
+		padding: 10px 10px;
+	}
+
+	.card-ucapan .ucapan-user .content-card {
+		padding: 15px 15px;
+		background: var(--white-color);
+		border-radius: 10px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .name-card h4 {
+		margin: 0;
+		color: var(--story-desc);
+		font-size: 18px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box h5 {
+		font-size: 12px;
+		color: var(--white-color);
+		margin: 0;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box {
+		width: 64px;
+		padding: 5px 5px;
+	}
+
+	/* Guest Book */
+
+	#guest-book .content-guestbook .title-guest h1 {
+		font-family: "Roboto Slab", serif;
+		font-weight: 400;
+		font-size: 25px;
+	}
+
+	#guest-book .content-guestbook .title-guest p {
+		font-family: "Sarabun";
+		font-weight: 400;
+		font-size: 16px;
+	}
+
+	form.input-kehadiran {
+		font-family: "Sarabun";
+		font-size: 18px;
+		padding: 30px 30px;
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 20px;
+	}
+
+	form.input-kehadiran .form-group {
+		margin: 0 0 25px 0;
+	}
+
+	form.input-kehadiran .form-check {
+		margin: 0 0 10px 0;
+	}
+
+	form.input-kehadiran button.btn.btn-dark.mt-5 {
+		width: 90%;
+		font-size: 18px;
+		font-family: "Sarabun";
+		display: block;
+		margin: auto;
+		background-color: var(--dark-blue);
+		border-color: var(--dark-blue);
+		border-radius: 30px 0px 30px 30px;
+	}
+
+    /* Gift Corner */
+
+	#gift .container .desc h1 {
+        padding: 30px 0 30px 0;
+		font-size: 25px;
+	}
+
+	#gift .container .desc p {
+		font-size: 16px;
+	}
+
+	#gift .qr {
+		width: 388px;
+		height: 275px;
+		background: #f8f8f8;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+	}
+
+	#gift .qr h1 {
+		margin: 25px 25px;
+		font-weight: 400;
+		font-size: 25px;
+		color: var(--barcode-text);
+	}
+
+	#gift .nama-mempelai {
+		margin: 70px 0 70px 0;
+		color: var(--white-color);
+	}
+
+	#gift .nama-mempelai p {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+	}
+
+	#gift .nama-mempelai h1 {
+		font-family: "Roboto Slab", serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 45px;
+	}
+
+    .copyright p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+	/* Landing Pages */
+
+	#front .img-front {
+		clip-path: ellipse(100% 95% at 50% 2%);
+		height: 350px;
+	}
+
+	#front .container .text {
+		margin-top: -220px;
+	}
+
+	#front .container button {
+		margin: 50px 0;
+	}
+
+	#front .container .text h1 {
+		margin-bottom: 40px;
+		font-size: 40px;
+		letter-spacing: 1px;
+	}
+
+	/* Homepages */
+
+	.top img {
+		height: 450px;
+	}
+
+	.text-top h1 {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.top .container .text-top {
+		margin-top: -240px;
+	}
+
+	.top .container .text-bottom {
+		margin: 80px 0 100px 0;
+		font-size: 17px;
+	}
+
+	.introduce .text-center {
+		margin: 40px 70px;
+	}
+
+	.introduce .count {
+		margin-top: 90px;
+	}
+
+	.counting .circle {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		padding: 8px;
+	}
+
+	.counting .circle b {
+		font-size: 26px;
+		letter-spacing: 3px;
+	}
+
+	.counting .circle p {
+		font-size: 12px;
+	}
+
+	.introduce .intro {
+		column-gap: 30px;
+	}
+
+	.introduce .intro .male img,
+	.female img {
+		width: 130px;
+	}
+
+	.introduce .intro .male h3,
+	.female h3 {
+		font-size: 28px;
+	}
+
+	.introduce .intro .male p,
+	.female p {
+		font-size: 13px;
+	}
+
+	.resepsi hr {
+		margin: 0 70px 25px 70px;
+	}
+
+	/* Card Guest Book */
+
+	.card-ucapan .ucapan-user {
+		max-width: 391px;
+		padding: 5px;
+	}
+
+	.card-ucapan .ucapan-user .content-card {
+		padding: 15px 15px;
+		background: var(--white-color);
+		border-radius: 10px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .name-card h4 {
+		margin: 0;
+		color: var(--story-desc);
+		font-size: 18px;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box h5 {
+		font-size: 12px;
+		color: var(--white-color);
+		margin: 0;
+	}
+
+	.card-ucapan .ucapan-user .title-card .box {
+		width: 64px;
+		padding: 5px 5px;
+	}
+
+    /* Gift Corner */
+
+	#gift .container .desc h1 {
+        padding: 30px 0 30px 0;
+		font-size: 25px;
+	}
+
+	#gift .container .desc p {
+		font-size: 16px;
+	}
+
+	#gift .qr {
+		width: 388px;
+		height: 275px;
+		background: #f8f8f8;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+	}
+
+	#gift .qr h1 {
+		margin: 25px 25px;
+		font-weight: 400;
+		font-size: 20px;
+		color: var(--barcode-text);
+	}
+
+	#gift .nama-mempelai {
+		margin: 50px 0 50px 0;
+		color: var(--white-color);
+	}
+
+	#gift .nama-mempelai p {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+	}
+
+	#gift .nama-mempelai h1 {
+		font-family: "Roboto Slab", serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	/* Landing Pages */
+
+	#front .img-front {
+		clip-path: ellipse(100% 95% at 50% 2%);
+		height: 350px;
+	}
+
+	#front .container .text {
+		margin-top: -220px;
+	}
+
+	#front .container button {
+		margin: 50px 0;
+	}
+
+	#front .container .text h1 {
+		margin-bottom: 40px;
+		font-size: 32px;
+		letter-spacing: 1px;
+	}
+
+	/* Homepages */
+
+	.text-top h1 {
+		font-size: 32px;
+	}
+
+	.introduce {
+		height: 650px;
+	}
+
+	.introduce .text-center {
+		margin: 40px 30px;
+	}
+
+	.introduce .intro {
+		column-gap: 20px;
+	}
+
+	.introduce .count {
+		margin-top: 90px;
+	}
+
+	.counting .circle {
+		max-width: 60px;
+		max-height: 60px;
+		border-radius: 50%;
+		line-height: 30px;
+	}
+
+	.counting .circle b {
+		font-size: 20px;
+		letter-spacing: 3px;
+	}
+
+	.counting .circle p {
+		font-size: 10px;
+		margin-top: -10px;
+	}
+
+	.counting {
+		column-gap: 7px;
+	}
+
+	.introduce .intro .male img,
+	.female img {
+		width: 110px;
+	}
+
+	.introduce .intro .male h3,
+	.female h3 {
+		font-size: 30px;
+	}
+
+	.introduce .intro .male p,
+	.female p {
+		font-size: 12px;
+	}
+
+	.introduce .count {
+		margin-top: 90px;
+	}
+
+	.counting .circle {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		padding: 8px;
+	}
+
+	.counting .circle b {
+		font-size: 26px;
+		letter-spacing: 3px;
+	}
+
+	.counting .circle p {
+		font-size: 12px;
+	}
+
+	.resepsi hr {
+		margin: 0 30px 25px 30px;
+	}
+
+    .copyright p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 280px) {
-    
 }
