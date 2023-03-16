@@ -127,3 +127,5 @@ function front() {
   document.getElementById("gift").style.display = "";
 	body.style.overflow = "";
 }
+
+AOS.init();

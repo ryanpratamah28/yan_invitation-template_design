@@ -356,7 +356,7 @@ input#input-radio.form-check-input {
 /* Guest Book */
 
 #guest-book .bg-wedding {
-	background: url("/img/bg-wedding.png");
+	background: url("img/bg-wedding.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
