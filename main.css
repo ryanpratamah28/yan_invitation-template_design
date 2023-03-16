@@ -35,8 +35,8 @@ input#input-radio.form-check-input {
 	border-color: var(--gray-color);
 }
 
-.form-check-input:checked {
-	background-color: var(--gray-color);
+input#input-radio.form-check-input:checked {
+    background-color: var(--gray-color);
 	border-color: var(--gray-color);
 }
 
@@ -442,12 +442,15 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 .card-ucapan .ucapan-user .content-card {
+    height: 250px;
 	padding: 20px 20px;
 	background: var(--white-color);
 	border-radius: 10px;
 }
 
 .card-ucapan .ucapan-user .content-card p {
+    max-height: 150px;
+    overflow: auto;
 	color: var(--card-text);
 }
 
