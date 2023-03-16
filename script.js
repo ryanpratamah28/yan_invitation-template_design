@@ -1,3 +1,30 @@
+$(function () {
+	AOS.init({
+		duration: 1200,
+	});
+
+	onElementHeightChange(document.body, function () {
+		AOS.refresh();
+	});
+});
+
+function onElementHeightChange(elm, callback) {
+	var lastHeight = elm.clientHeight;
+	var newHeight;
+
+	(function run() {
+		newHeight = elm.clientHeight;
+		if (lastHeight !== newHeight) callback();
+		lastHeight = newHeight;
+
+		if (elm.onElementHeightChangeTimer) {
+			clearTimeout(elm.onElementHeightChangeTimer);
+		}
+
+		elm.onElementHeightChangeTimer = setTimeout(run, 200);
+	})();
+}
+
 $(document).ready(function () {
 	$(".slider-img").slick({
 		infinite: true,
@@ -93,7 +120,7 @@ $(document).ready(function () {
 					slidesToScroll: 1,
 				},
 			},
-      {
+			{
 				breakpoint: 420,
 				settings: {
 					slidesToShow: 1,
@@ -116,16 +143,12 @@ document.getElementById("gallery").style.display = "none";
 document.getElementById("story").style.display = "none";
 document.getElementById("guest-book").style.display = "none";
 document.getElementById("gift").style.display = "none";
-body.style.overflow = "hidden";
 
 function front() {
 	document.getElementById("front").style.display = "none";
 	document.getElementById("landing").style.display = "";
-  document.getElementById("gallery").style.display = "";
-  document.getElementById("story").style.display = "";
-  document.getElementById("guest-book").style.display = "";
-  document.getElementById("gift").style.display = "";
-	body.style.overflow = "";
+	document.getElementById("gallery").style.display = "";
+	document.getElementById("story").style.display = "";
+	document.getElementById("guest-book").style.display = "";
+	document.getElementById("gift").style.display = "";
 }
-
-AOS.init();
