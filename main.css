@@ -36,7 +36,7 @@ input#input-radio.form-check-input {
 }
 
 input#input-radio.form-check-input:checked {
-    background-color: var(--gray-color);
+	background-color: var(--gray-color);
 	border-color: var(--gray-color);
 }
 
@@ -47,7 +47,7 @@ input#input-radio.form-check-input:checked {
 	clip-path: ellipse(100% 83% at 50% 7%);
 	height: 620px;
 	object-fit: cover;
-    filter: brightness(0.2);
+	filter: brightness(0.2);
 }
 
 #front {
@@ -66,6 +66,11 @@ input#input-radio.form-check-input:checked {
 	font-family: "Roboto Slab", serif;
 	font-size: 45px;
 	letter-spacing: 2px;
+}
+
+#front .container .text h6 {
+	font-size: 28px;
+	font-family: "Dancing Script", cursive;
 }
 
 #front .container button {
@@ -443,15 +448,15 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 .card-ucapan .ucapan-user .content-card {
-    height: 250px;
+	height: 250px;
 	padding: 20px 20px;
 	background: var(--white-color);
 	border-radius: 10px;
 }
 
 .card-ucapan .ucapan-user .content-card p {
-    max-height: 150px;
-    overflow: auto;
+	max-height: 150px;
+	overflow: auto;
 	color: var(--card-text);
 }
 
@@ -533,7 +538,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	font-family: "Roboto Slab", serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 60px;
+	font-size: 30px;
 }
 
 #sosmed {
@@ -1135,10 +1140,10 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		border-radius: 30px 0px 30px 30px;
 	}
 
-    /* Gift Corner */
+	/* Gift Corner */
 
 	#gift .container .desc h1 {
-        padding: 30px 0 30px 0;
+		padding: 30px 0 30px 0;
 		font-size: 25px;
 	}
 
@@ -1179,9 +1184,9 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		font-size: 45px;
 	}
 
-    .copyright p {
-        font-size: 14px;
-    }
+	.copyright p {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -1303,10 +1308,10 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		padding: 5px 5px;
 	}
 
-    /* Gift Corner */
+	/* Gift Corner */
 
 	#gift .container .desc h1 {
-        padding: 30px 0 30px 0;
+		padding: 30px 0 30px 0;
 		font-size: 25px;
 	}
 
@@ -1452,9 +1457,9 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		margin: 0 30px 25px 30px;
 	}
 
-    .copyright p {
-        font-size: 12px;
-    }
+	.copyright p {
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 280px) {
