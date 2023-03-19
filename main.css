@@ -23,6 +23,11 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 #app .title h1 {
 	margin: 20px 0 50px 0;
 	font-weight: 700;
@@ -88,6 +93,10 @@ input#input-radio.form-check-input:checked {
 	color: white;
 }
 
+#resepsi .container a.btn-lokasi {
+	text-decoration: none;
+}
+
 /* Homepage */
 
 .top img {
@@ -95,6 +104,7 @@ input#input-radio.form-check-input:checked {
 	clip-path: ellipse(95% 80% at 50% 0%);
 	object-fit: cover;
 	height: 600px;
+	filter: brightness(0.3);
 }
 
 .top .container {
@@ -114,7 +124,7 @@ input#input-radio.form-check-input:checked {
 }
 
 .text-top h1 {
-	font-size: 60px;
+	font-size: 45px;
 	word-spacing: 10px;
 	font-family: "Roboto Slab", serif;
 }
@@ -166,6 +176,7 @@ input#input-radio.form-check-input:checked {
 
 .introduce .intro .male p,
 .female p {
+	margin: 0;
 	color: white;
 	font-family: "Sarabun", sans-serif;
 }
@@ -279,8 +290,8 @@ input#input-radio.form-check-input:checked {
 }
 
 .gallery .slider-img .wedding-images img {
-	width: 320px;
-	height: 320px;
+	width: 300px;
+	height: auto;
 	border-radius: 50%;
 }
 
@@ -362,7 +373,7 @@ input#input-radio.form-check-input:checked {
 /* Guest Book */
 
 #guest-book .bg-wedding {
-	background: url("img/bg-wedding.png");
+	background: url("img/WN-75.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -483,6 +494,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 /* Gift Corner */
 
 #gift {
+	position: relative;
 	margin-top: -30px;
 	background: #436b78;
 	box-shadow: 1px -12px 20px rgba(0, 0, 0, 0.15);
@@ -524,7 +536,8 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 #gift .nama-mempelai {
-	margin: 100px 0 100px 0;
+	padding-top: 100px;
+	margin: 0 0 100px 0;
 	color: var(--white-color);
 }
 
@@ -565,13 +578,20 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 @media screen and (max-width: 1200px) {
+	#front .container .text h1 {
+		margin-bottom: 50px;
+		font-family: "Roboto Slab", serif;
+		font-size: 45px;
+		letter-spacing: 2px;
+	}
+
 	/* Homepage */
 	.top .container .text-top {
 		margin-top: -320px;
 	}
 
 	.top .container .text-bottom {
-		margin: 100px 0 100px 0;
+		margin: 130px 0 100px 0;
 	}
 
 	.resepsi hr {
@@ -584,6 +604,13 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 @media screen and (max-width: 991px) {
+	#front .container .text h1 {
+		margin-bottom: 60px;
+		font-family: "Roboto Slab", serif;
+		font-size: 35px;
+		letter-spacing: 2px;
+	}
+
 	/* Homepage */
 
 	.introduce .text-center {
@@ -602,7 +629,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 
 	.gallery .slider-img .wedding-images img {
 		width: 300px;
-		height: 300px;
+		height: auto;
 	}
 
 	/* Story */
@@ -657,6 +684,13 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 @media screen and (max-width: 768px) {
+	#front .container .text h1 {
+		margin-bottom: 40px;
+		font-family: "Roboto Slab", serif;
+		font-size: 30px;
+		letter-spacing: 2px;
+	}
+
 	/* Landing Pages */
 
 	#front .img-front {
@@ -703,7 +737,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 
 	.gallery .slider-img .wedding-images img {
 		width: 250px;
-		height: 250px;
+		height: auto;
 	}
 
 	/* Story */
@@ -811,7 +845,16 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	}
 
 	#front .container button {
-		margin: 80px 0;
+		margin: 60px 0;
+	}
+
+	.text-top h1 {
+		font-size: 35px;
+	}
+
+	.top .container .text-bottom {
+		margin: 150px 0 100px 0;
+		font-size: 17px;
 	}
 
 	/* Homepage */
@@ -934,14 +977,13 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	}
 
 	#front .container button {
-		margin: 60px 0;
+		margin: 55px 0;
 	}
 
 	/* Home Pages */
 
 	.text-top h1 {
-		font-size: 45px;
-		word-spacing: 5px;
+		font-size: 28px;
 	}
 
 	.text-top p {
@@ -949,7 +991,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	}
 
 	.top .container .text-bottom {
-		margin: 80px 0 100px 0;
+		margin: 120px 0 100px 0;
 		font-size: 17px;
 	}
 
@@ -1013,7 +1055,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 
 	.gallery .slider-img .wedding-images img {
 		width: 200px;
-		height: 200px;
+		height: auto;
 	}
 
 	/* Story */
@@ -1142,6 +1184,10 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 
 	/* Gift Corner */
 
+	#gift {
+		margin-top: -100px;
+	}
+
 	#gift .container .desc h1 {
 		padding: 30px 0 30px 0;
 		font-size: 25px;
@@ -1181,7 +1227,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		font-family: "Roboto Slab", serif;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 45px;
+		font-size: 28px;
 	}
 
 	.copyright p {
@@ -1190,6 +1236,21 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 }
 
 @media screen and (max-width: 400px) {
+	#front .container .text h1 {
+		margin-bottom: 30px;
+		font-family: "Roboto Slab", serif;
+		font-size: 28px;
+		letter-spacing: 2px;
+	}
+
+	#front .container .text h6 {
+		font-size: 20px;
+	}
+
+	#gift {
+		margin-top: -90px;
+	}
+
 	/* Landing Pages */
 
 	#front .img-front {
@@ -1205,12 +1266,6 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		margin: 50px 0;
 	}
 
-	#front .container .text h1 {
-		margin-bottom: 40px;
-		font-size: 40px;
-		letter-spacing: 1px;
-	}
-
 	/* Homepages */
 
 	.top img {
@@ -1218,8 +1273,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	}
 
 	.text-top h1 {
-		font-size: 40px;
-		font-weight: 600;
+		font-size: 28px;
 	}
 
 	.top .container .text-top {
@@ -1349,7 +1403,7 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 		font-family: "Roboto Slab", serif;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 25px;
 	}
 }
 
@@ -1370,15 +1424,20 @@ form.input-kehadiran button.btn.btn-dark.mt-5 {
 	}
 
 	#front .container .text h1 {
-		margin-bottom: 40px;
-		font-size: 32px;
-		letter-spacing: 1px;
+		margin-bottom: 30px;
+		font-family: "Roboto Slab", serif;
+		font-size: 25px;
+		letter-spacing: 2px;
+	}
+
+	#front .container .text h6 {
+		font-size: 18px;
 	}
 
 	/* Homepages */
 
 	.text-top h1 {
-		font-size: 32px;
+		font-size: 25px;
 	}
 
 	.introduce {
